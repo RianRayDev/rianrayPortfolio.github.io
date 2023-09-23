@@ -12227,6 +12227,7 @@ textarea.form-control-lg {
   left: 0;
   width: 100%;
   height: 100%;
+  
 }
 
 /*Text*/
@@ -12247,6 +12248,7 @@ textarea.form-control-lg {
 /*Hover*/
 .card-one:hover .imgbox-crd-one {
   bottom: 80px;
+  transition: 0.3s ease;
 }
 
 .card-one:hover:before {
@@ -12256,6 +12258,19 @@ textarea.form-control-lg {
 .card-one:hover:after {
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+}
+
+.dropdown-menu {
+  display: block;
+  opacity: 0;
+  margin-top: 80px;
+  transition: all 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  opacity: 1;
 }
 /*-------------------------------------------------- */
 
