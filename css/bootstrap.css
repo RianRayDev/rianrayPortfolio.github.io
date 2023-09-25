@@ -12541,7 +12541,6 @@ box-shadow: 0px 0px 20px 2px #ffffff79;
     right: 0.3em;
     transition: all 0.3s;
   }
-  
   .cssbuttons-io-button:hover .icon-modal-for-login {
     width: calc(100% - 0.6em);
   }
