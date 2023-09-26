@@ -29,24 +29,24 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">                  
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">               
           <li class="nav-item">
-            <a class="nav-link" aria-current="home" href="../index.html">Home</a>
-          </li>
+            <a class="nav-link" aria-current="home" href="../index.html" id="hover-effect">Home</a>
+          </li> 
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="true" aria-expanded="false" id="hover-effect">
               About
             </a>
             <ul class="dropdown-menu">
-              <li><a id="dropdownhover" class="dropdown-item" href="#">More Info</a></li>
-              <li><a id="dropdownhover" class="dropdown-item" href="contact-us.html">Contact</a></li>
-              <li><a id="dropdownhover" class="dropdown-item" href="#">Blog</a></li>
+              <li><a id="dropdownhover" class="dropdown-item" href="../pages/about-us.html">More Info</a></li>
+              <li><a id="dropdownhover" class="dropdown-item" href="#">Contact</a></li>
+              <li><a id="dropdownhover" class="dropdown-item disabled" href="#">Blog</a></li>
             </ul>
+          </li>
 
-
-          </li><li class="nav-item">
-            <a class="nav-link" href="./pages/contact-us.html">Contact Us</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="hover-effect">Contact Us</a>
           </li>
         </ul>
 
@@ -162,7 +162,7 @@
               <textarea name="msg" id="msg" class="form-control" placeholder="Write your message" cols="30" rows="4" required=""></textarea>
             </div>
             <div class="form-group text-center m-4">
-              <input type="submit" name="submit" id="submit" class="btn btn-outline-orange-subtle px-5" value="Send" aria-required="true">
+              <input type="submit" name="submit" id="submit" class="btn btn-outline-orange-subtle px-5 btn-anim-click" value="Send" aria-required="true">
             </div>
         </form>
     </div>
@@ -179,9 +179,9 @@
             <h5>Quick Links</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="../index.html" class="p-0 text-light nav-link">• Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">• About</a></li>
-              <li class="nav-item mb-2"><a href="./pages/contact-us.html" class="nav-link p-0 text-light">• Contact</a></li>
-              <li class="nav-item mb-2"><a href="./pages/FAQ.html" class="nav-link p-0 text-light">• FAQs</a></li>
+              <li class="nav-item mb-2"><a href="./about-us.html" class="nav-link p-0 text-light">• About</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">• Contact</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light opacity-50">• FAQs</a></li>
             </ul>
           </div>
 
@@ -221,6 +221,7 @@
 <!--FOOTER BAR-->
 
 </body>
+<script src="//code.tidio.co/vqppqmmop4c3e3hnuhpyzkaqk4fxykzi.js" async></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script src="../js/back-to-top.js"></script>
