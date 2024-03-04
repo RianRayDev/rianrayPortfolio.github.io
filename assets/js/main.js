@@ -643,6 +643,19 @@ document.querySelector('.send-email').addEventListener('click', function() {
     }, 1000);
   }
 });
+// 
+// profile video
+// 
+const profileVideo = document.getElementById('profileVideo');
+
+profileVideo.addEventListener('mouseenter', () => {
+  profileVideo.play();
+});
+
+profileVideo.addEventListener('mouseleave', () => {
+  profileVideo.pause();
+});
+
 
   new PureCounter();
 })();
