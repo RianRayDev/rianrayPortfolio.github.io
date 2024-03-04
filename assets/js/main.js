@@ -603,6 +603,46 @@
 
   });
 
+//
+// emailJS
+// 
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // these IDs from the previous steps
+      emailjs.sendForm('service_foglw4w', 'template_4a29mpk', this)
+          .then(() => {
+              console.log('SUCCESS!');
+          }, (error) => {
+              console.log('FAILED...', error);
+          });
+  });
+}
+// 
+// send message
+// 
+document.querySelector('.send-email').addEventListener('click', function() {
+
+  const form = document.querySelector('#contact-form'); 
+  if (form.checkValidity()) {
+    this.classList.add('clicked'); 
+    this.textContent = 'Sent'; 
+
+    setTimeout(() => {
+      this.classList.remove('clicked');
+      this.textContent = 'Send Message';
+    }, 3000);
+  } else {
+
+    this.style.backgroundColor = '#ea4036'; 
+    this.textContent = 'Missing Fields'; 
+
+    setTimeout(() => {
+      this.style.backgroundColor = ''; 
+      this.textContent = 'Send Message';
+    }, 1000);
+  }
+});
 
   new PureCounter();
 })();
