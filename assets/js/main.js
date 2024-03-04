@@ -648,10 +648,10 @@ document.querySelector('.send-email').addEventListener('click', function() {
 // 
 // profile video
 // 
-const videoContainer = document.querySelector('.content-portfolio');
-const videoTwo = document.querySelector('.vidTwo');
-const videoThree = document.querySelector('.vidThree');
-const videoFour = document.querySelector('.vidFour');
+const videoContainer = document.querySelectorAll('.content-portfolio');
+const videoTwo = document.querySelectorAll('.vidTwo');
+const videoThree = document.querySelectorAll('.vidThree');
+const videoFour = document.querySelectorAll('.vidFour');
 
 const profileVideo = videoContainer.querySelector('#profileVideo');
 const two = videoTwo.querySelector('#two');
