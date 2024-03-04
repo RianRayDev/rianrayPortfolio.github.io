@@ -2707,8 +2707,9 @@ section {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins';
+  text-shadow: 2px 2px 12px #1f1f1f;
   --light: #fff;
-  --dark: #2e2e2ebb;
+  --dark: #272727e7;
 }
 
 .container-portfolio {

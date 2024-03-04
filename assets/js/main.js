@@ -649,11 +649,12 @@ document.querySelector('.send-email').addEventListener('click', function() {
 const profileVideo = document.getElementById('profileVideo');
 
 profileVideo.addEventListener('mouseover', () => {
-  profileVideo.play();
+  profileVideo.currentTime = 0; 
+  profileVideo.play(); 
 });
 
 profileVideo.addEventListener('mouseout', () => {
-  profileVideo.pause();
+  profileVideo.pause(); 
 });
 
   new PureCounter();
