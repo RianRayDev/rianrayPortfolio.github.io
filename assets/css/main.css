@@ -981,10 +981,24 @@ section {
   padding-left: 90px !important;
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .container {
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+@media (max-width: 1300px) {
+  .container-techstack {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  #techstacks-cards {
+    justify-content: center !important;
+    margin: 0;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .container-techstack {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  #techstacks-cards {
+    justify-content: center !important;
+    margin: 0;
   }
 }
 @media (min-width: 1400px) {
@@ -992,20 +1006,26 @@ section {
     padding-right: 20px !important;
     padding-left: 20px !important;
   }
-  .container {
+  /* .containerTS {
     padding-right: 0px !important;
     padding-left: 0px !important;
-  }
+  } */
 }
 @media (min-width: 1600px) {
   .container-techstack {
     padding-right: 90px !important;
     padding-left: 90px !important;
   }
-  .container {
+}
+@media (min-width: 1700px) {
+  .container-techstack {
+    padding-right: 200px !important;
+    padding-left: 200px !important;
+  }
+  /* .containerTS {
     padding-right: 0px !important;
     padding-left: 0px !important;
-  }
+  } */
 }
 
 .icon-box-hover .icon-bottom {
