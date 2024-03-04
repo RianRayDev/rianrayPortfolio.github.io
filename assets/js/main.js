@@ -648,14 +648,13 @@ document.querySelector('.send-email').addEventListener('click', function() {
 // 
 const profileVideo = document.getElementById('profileVideo');
 
-profileVideo.addEventListener('mouseenter', () => {
+profileVideo.addEventListener('mouseover', () => {
   profileVideo.play();
 });
 
-profileVideo.addEventListener('mouseleave', () => {
+profileVideo.addEventListener('mouseout', () => {
   profileVideo.pause();
 });
-
 
   new PureCounter();
 })();
