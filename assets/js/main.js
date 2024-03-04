@@ -676,22 +676,18 @@ videoFour.addEventListener('mouseover', () => {
 
 videoContainer.addEventListener('mouseout', () => {
     profileVideo.pause();
-    profileVideo.currentTime = 0;
 });
 
 videoTwo.addEventListener('mouseout', () => {
   two.pause();
-  two.currentTime = 0;
 });
 
 videoThree.addEventListener('mouseout', () => {
   three.pause();
-  three.currentTime = 0;
 });
 
 videoFour.addEventListener('mouseout', () => {
   four.pause();
-  four.currentTime = 0;
 });
 
 
