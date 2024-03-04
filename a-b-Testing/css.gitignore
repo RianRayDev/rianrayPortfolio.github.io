@@ -1,0 +1,19 @@
+.poppins {
+    font-family: 'Poppins';
+}
+
+.more {
+    transition: 180ms ease-in-out;
+}
+
+.more:hover {
+    color: #212529 !important; 
+}
+
+.btn {
+    border: 2px solid #fff !important;
+}
+.btn:hover {
+    transition: 180ms all ease-in-out !important;
+    border: 2px solid #5c636a !important;
+}
