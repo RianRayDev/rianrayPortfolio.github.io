@@ -263,106 +263,99 @@
   /**
    * Portfolio
    */
-  const cardsContainer = document.querySelector('.cards');
-  const cards = document.querySelector(".cards");
-  const images = document.querySelectorAll(".card__img");
-  const backgrounds = document.querySelectorAll(".card__bg");
-  const cardNodes = document.querySelectorAll('.card');
-  const headings = document.querySelectorAll('#projects-title, #projects-subTitle');
-  const range = 40;
-  let mouseX = 0;
-  let mouseY = 0;
-  let isMouseInside = false; // Flag to track if mouse is inside #myPortfolio
+  // const cardsContainer = document.querySelector('.cards');
+  // const cards = document.querySelector(".cards");
+  // const images = document.querySelectorAll(".card__img");
+  // const backgrounds = document.querySelectorAll(".card__bg");
+  // const cardNodes = document.querySelectorAll('.card');
+  // const headings = document.querySelectorAll('#projects-title, #projects-subTitle');
+  // const range = 40;
+  // let mouseX = 0;
+  // let mouseY = 0;
+  // let isMouseInside = false; 
 
-  // Initialize the default position
-  resetTransforms();
+  // resetTransforms();
 
-  document.addEventListener("mousemove", ({ x, y }) => {
-    mouseX = x;
-    mouseY = y;
-    if (isMouseInside) {
-      updateTransforms();
-    }
-  });
+  // document.addEventListener("mousemove", ({ x, y }) => {
+  //   mouseX = x;
+  //   mouseY = y;
+  //   if (isMouseInside) {
+  //     updateTransforms();
+  //   }
+  // });
 
-  // Add event listener to #myPortfolio section
-  const myPortfolioSection = document.getElementById('myPortfolio');
-  myPortfolioSection.addEventListener('mouseenter', () => {
-    isMouseInside = true; // Set flag to true when mouse enters
-    cards.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; // Enable transition for cards
-    images.forEach(image => {
-      image.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; // Enable transition for images
-    });
-    backgrounds.forEach(background => {
-      background.style.transition = "background-position 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; // Enable transition for backgrounds
-    });
+  // const myPortfolioSection = document.getElementById('myPortfolio');
+  // myPortfolioSection.addEventListener('mouseenter', () => {
+  //   isMouseInside = true; 
+  //   cards.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; 
+  //   images.forEach(image => {
+  //     image.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; 
+  //   });
+  //   backgrounds.forEach(background => {
+  //     background.style.transition = "background-position 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; 
+  //   });
 
-    // Add scroll tracking
-    window.addEventListener('scroll', updateTransforms);
+  //   window.addEventListener('scroll', updateTransforms);
 
-    // Wait for 500 milliseconds
-    const transitionTimeout = setTimeout(() => {
-      cards.style.transition = "none"; // Disable transition for cards
-      images.forEach(image => {
-        image.style.transition = "none"; // Disable transition for images
-      });
-      backgrounds.forEach(background => {
-        background.style.transition = "none"; // Disable transition for backgrounds
-      });
-    }, 500);
+  //   const transitionTimeout = setTimeout(() => {
+  //     cards.style.transition = "none"; 
+  //     images.forEach(image => {
+  //       image.style.transition = "none"; 
+  //     });
+  //     backgrounds.forEach(background => {
+  //       background.style.transition = "none"; 
+  //     });
+  //   }, 500);
 
-    // Clear the timeout if the mouse interrupts
-    myPortfolioSection.addEventListener('mouseleave', () => {
-      clearTimeout(transitionTimeout);
-    });
+  //   myPortfolioSection.addEventListener('mouseleave', () => {
+  //     clearTimeout(transitionTimeout);
+  //   });
 
-    updateTransforms();
-  });
+  //   updateTransforms();
+  // });
 
-  myPortfolioSection.addEventListener('mouseleave', () => {
-    isMouseInside = false; // Set flag to false when mouse leaves
-    cards.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; // Smooth transition for alignment
-    images.forEach(image => {
-      image.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)";
-    });
-    backgrounds.forEach(background => {
-      background.style.transition = "background-position 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)";
-    });
-    resetTransforms(); // Reset transforms when mouse leaves #myPortfolio
+  // myPortfolioSection.addEventListener('mouseleave', () => {
+  //   isMouseInside = false; 
+  //   cards.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)"; 
+  //   images.forEach(image => {
+  //     image.style.transition = "transform 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)";
+  //   });
+  //   backgrounds.forEach(background => {
+  //     background.style.transition = "background-position 0.5s cubic-bezier(0.41, 0.01, 0.39, 0.99)";
+  //   });
+  //   resetTransforms(); 
 
-    // Remove scroll tracking
-    window.removeEventListener('scroll', updateTransforms);
-  });
+  //   window.removeEventListener('scroll', updateTransforms);
+  // });
 
-  function updateTransforms() {
-    const yValue = calcValue(mouseY, window.innerHeight);
-    const xValue = calcValue(mouseX, window.innerWidth);
-    const parallaxFactor = 0.5;
-    cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg) translateZ(${yValue * parallaxFactor}px)`;
-    images.forEach(image => {
-      image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px) translateZ(${yValue * parallaxFactor}px)`;
-    });
-    images.forEach(image => {
-      image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px) translateZ(${yValue * parallaxFactor}px)`;
-    });
-  }
+  // function updateTransforms() {
+  //   const yValue = calcValue(mouseY, window.innerHeight);
+  //   const xValue = calcValue(mouseX, window.innerWidth);
+  //   const parallaxFactor = 0.5;
+  //   cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg) translateZ(${yValue * parallaxFactor}px)`;
+  //   images.forEach(image => {
+  //     image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px) translateZ(${yValue * parallaxFactor}px)`;
+  //   });
+  //   images.forEach(image => {
+  //     image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px) translateZ(${yValue * parallaxFactor}px)`;
+  //   });
+  // }
 
+  // function resetTransforms() {
+  //   const defaultXValue = calcValue(window.innerWidth / 2, window.innerWidth) / 1.8;
+  //   const defaultYValue = calcValue(window.innerHeight / 2, window.innerHeight) / 1.8;
+  //   cards.style.transform = `rotateX(${defaultYValue}deg) rotateY(${defaultXValue}deg)`;
+  //   images.forEach(image => {
+  //     image.style.transform = `translateX(${-defaultXValue}px) translateY(${defaultYValue}px)`;
+  //   });
+  //   backgrounds.forEach(background => {
+  //     background.style.backgroundPosition = `${defaultXValue * 0.45}px ${-defaultYValue * 0.45}px`;
+  //   });
+  // }
 
-  function resetTransforms() {
-    const defaultXValue = calcValue(window.innerWidth / 2, window.innerWidth) / 1.8;
-    const defaultYValue = calcValue(window.innerHeight / 2, window.innerHeight) / 1.8;
-    cards.style.transform = `rotateX(${defaultYValue}deg) rotateY(${defaultXValue}deg)`;
-    images.forEach(image => {
-      image.style.transform = `translateX(${-defaultXValue}px) translateY(${defaultYValue}px)`;
-    });
-    backgrounds.forEach(background => {
-      background.style.backgroundPosition = `${defaultXValue * 0.45}px ${-defaultYValue * 0.45}px`;
-    });
-  }
-
-  function calcValue(a, b) {
-    return (a / b * range - range / 2).toFixed(1);
-  }
+  // function calcValue(a, b) {
+  //   return (a / b * range - range / 2).toFixed(1);
+  // }
   /**
    * Google Maps
    */
